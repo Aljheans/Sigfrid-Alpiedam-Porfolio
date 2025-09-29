@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/mediaqueries.css" />
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Ping Alpiedam</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experiences</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Ping Alpiedam</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experiences</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-wrapper">
+            <div class="container text-content">
+                <div class="text-sm">Computer Engineer</div>
+                <h1 class="Name">Sigfrid Aljhean R.<span class="text-primary"> Alpiedam</span></h1>
+                <h2 class="tit">Full-Stack Developer & System Engineer</h2>
+                <p class="text-1">Passionate about creating robust web applications and optimizing hardware systems. Specialized in Python, Django framework, and high-performance computing solutions.</p>
+                <a href="#about" class="btn">Learn More</a>
+                <a href="assets/files/ALPIEDAM_RESUME.pdf" class="btn btn-secondary" download>Download Resume</a>
+            </div>
+            <div class="hero-image">
+                <img src="assets/pics/mypic.JPG" alt="Hero Image" />
+            </div>
+        </div>
+    </section>
+    <hr class="divider" />
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-wrapper">
+            <div class="about-text">
+                <h2 class="tit">About Me</h2>
+                <p class="aboutdes">Hello! I'm Sigfrid Aljhean R. Alpiedam, a dedicated Computer Engineer with a passion for developing innovative software solutions and optimizing hardware systems. With a strong foundation in both front-end and back-end development, I specialize in creating robust web applications using Python and the Django framework.</p>
+                <p class="aboutdes">My expertise extends to system engineering, where I focus on high-performance computing solutions that enhance efficiency and reliability. I thrive in collaborative environments and am always eager to take on new challenges that push the boundaries of technology.</p>
+            </div>
+            <div class="abouts">
+                <div class="containerabout">
+                    <div class="about-box">
+                        <div class="icon">💻</div>
+                        <h3 class="box-title">Software Development</h3>
+                        <p class="box-description">
+                            Building full-stack web applications with modern tools like Python, Django, and JavaScript to solve real-world problems.
+                        </p>
+                    </div>
+
+                    <div class="about-box">
+                        <div class="icon">🛠️</div>
+                        <h3 class="box-title">System Engineering</h3>
+                        <p class="box-description">
+                            Designing and managing complex computing systems to ensure performance, reliability, and scalability.
+                        </p>
+                    </div>
+
+                    <div class="about-box">
+                        <div class="icon">🔧</div>
+                        <h3 class="box-title">Hardware Solution</h3>
+                        <p class="box-description">
+                            Expert in custom PC builds, hardware troubleshooting, and performance optimization for various use cases.
+                        </p>
+                    </div>
+
+                    <div class="about-box">
+                        <div class="icon">🗄️</div>
+                        <h3 class="box-title">System Administration</h3>
+                        <p class="box-description">
+                            Specialized in server management, network configuration, and system optimization for peak performance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="divider" />
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="skills-wrapper">
+            <h2 class="tit">Technical Skills</h2>
+            <p class="subtit">Proficient in modern technologies and development practices</p>
+            
+            <div class="skills-grid">
+
+            <div class="skill-card">
+                <div class="icon"><img src="assets/icons/python.png" alt="Hero Image" /></div>
+                <h3>Python</h3>
+                <p class="category">Development</p>
+                <div class="progress-bar"><div class="fill" style="width: 90%"></div></div>
+                <span class="percent">90%</span>
+            </div>
+
+            <div class="skill-card">
+                <div class="icon1"><img src="assets/icons/django.png" alt="Hero Image" /></div>
+                <h3>Django Framework</h3>
+                <p class="category">Development</p>
+                <div class="progress-bar"><div class="fill" style="width: 85%"></div></div>
+                <span class="percent">85%</span>
+            </div>
+
+            <div class="skill-card">
+                <div class="icon1"><img src="assets/icons/css.png" alt="Hero Image" /></div>
+                <h3>HTML/CSS</h3>
+                <p class="category">Development</p>
+                <div class="progress-bar"><div class="fill" style="width: 95%"></div></div>
+                <span class="percent">95%</span>
+            </div>
+
+            <div class="skill-card">
+                <div class="icon1"><img src="assets/icons/js.png" alt="Hero Image" /></div>
+                <h3>JavaScript</h3>
+                <p class="category">Development</p>
+                <div class="progress-bar"><div class="fill" style="width: 50%"></div></div>
+                <span class="percent">50%</span>
+            </div>
+
+            <div class="skill-card">
+                <div class="icon1"><img src="assets/icons/word.png" alt="Hero Image" /></div>
+                <h3>Wordpress</h3>
+                <p class="category">Development</p>
+                <div class="progress-bar"><div class="fill" style="width: 20%"></div></div>
+                <span class="percent">20%</span>
+            </div>
+
+            <div class="skill-card">
+                <div class="icon1"><img src="assets/icons/sql.png" alt="Hero Image" /></div>
+                <h3>My SQL</h3>
+                <p class="category">Development</p>
+                <div class="progress-bar"><div class="fill" style="width: 80%"></div></div>
+                <span class="percent">80%</span>
+            </div>
+
+            <div class="skill-card">
+                <h3>System Administration</h3>
+                <p class="category">Infrastructure</p>
+                <div class="progress-bar"><div class="fill" style="width: 70%"></div></div>
+                <span class="percent">70%</span>
+            </div>
+
+            <div class="skill-card">
+                <div class="icon1"><img src="assets/icons/pc.png" alt="Hero Image" /></div>
+                <h3>PC Building & Hardware</h3>
+                <p class="category">Hardware</p>
+                <div class="progress-bar"><div class="fill" style="width: 95%"></div></div>
+                <span class="percent">95%</span>
+            </div>
+
+            <div class="skill-card">
+                <div class="icon"><img src="assets/icons/network.png" alt="Hero Image" /></div>
+                <h3>Network Management</h3>
+                <p class="category">Infrastructure</p>
+                <div class="progress-bar"><div class="fill" style="width: 75%"></div></div>
+                <span class="percent">75%</span>
+            </div>
+
+            <div class="skill-card">
+                <div class="icon"><img src="assets/icons/data.png" alt="Hero Image" /></div>
+                <h3>Database Management</h3>
+                <p class="category">Development</p>
+                <div class="progress-bar"><div class="fill" style="width: 50%"></div></div>
+                <span class="percent">50%</span>
+            </div>
+            </div>
+        </div>
+    </section>
+    <hr class="divider" />
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="projects-header">
+            <h2 class="tit">Featured Projects</h2>
+            <p class="subtit">Recent work showcasing technical expertise and problem-solving skills</p>
+        </div>
+
+        <div class="projects-wrapper scrolling-carousel">
+            <div class="project-card">
+            <div class="project-status production">Production</div>
+            <img src="assets/pics/ecommerce.png" alt="E-Commerce Platform">
+            <div class="project-content">
+                <span class="tag">Web Development</span>
+                <h3>Django E-Commerce Platform</h3>
+                <p>Full-stack web application with Django backend, featuring user authentication, payment processing, and inventory management.</p>
+                <div class="tech-stack">
+                <span>Django</span><span>Python</span><span>PostgreSQL</span><span>JavaScript</span>
+                </div>
+            </div>
+            </div>
+
+            <div class="project-card">
+            <div class="project-status production">Production</div>
+            <img src="assets/pics/iram.png" alt="Custom Gaming Systems">
+            <div class="project-content">
+                <span class="tag">Software and Hardware Development</span>
+                <h3>Intelligent Room Allocation Machine</h3>
+                <p>The Intelligent Room Allocation Machine is an advanced AI-powered system designed to streamline and automate the assignment of teachers to classrooms based on their schedules. Utilizing cutting-edge AI camera detection technology, this machine accurately identifies teachers and seamlessly allocates them to the correct rooms without any errors or conflicts. By eliminating manual scheduling errors, it ensures optimal room utilization and smooth daily operations within educational institutions. This smart solution enhances efficiency, reduces administrative workload, and guarantees that every teacher is precisely where they need to be on time, every time.</p>
+                <div class="tech-stack">
+                <span>Hardware Assembly</span><span>Performance Tuning</span><span>Software Development</span><span>Python</span><span>MySQL</span>
+                </div>
+            </div>
+            </div>
+
+            <div class="project-card">
+            <div class="project-status active">Active</div>
+            <img src="assets/pics/pc.jpg" alt="Custom Gaming Systems">
+            <div class="project-content">
+                <span class="tag">Hardware Solutions</span>
+                <h3>Custom Gaming PC Build</h3>
+                <p>High-performance PC builds optimized for gaming, content creation, and professional workloads with custom cooling solutions.</p>
+                <div class="tech-stack">
+                <span>Hardware Assembly</span><span>Performance Tuning</span><span>Thermal Management</span>
+                </div>
+            </div>
+            </div>
+
+            <div class="project-card">
+            <div class="project-status open-source">Open Source</div>
+            <img src="assets/pics/automation.png" alt="Python Automation Tools">
+            <div class="project-content">
+                <span class="tag">Software Tools</span>
+                <h3>Sentimental Analysis Application</h3>
+                <p>The Sentimental Analysis Application is a Python tool that uses Natural Language Processing (NLP) to classify text sentiment as positive, negative, or neutral. Integrated into a broader productivity suite, it supports data-driven decisions and enhances workflow automation.</p>
+                <div class="tech-stack">
+                <span>Python</span><span>GUI Development</span><span>System APIs</span><span>Automation</span>
+                </div>
+            </div>
+            </div>
+            
+
+        </div>
+    </section>
+    <hr class="divider" />
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="experience-header">
+            <h2>Professional Experience</h2>
+            <p>Track record of delivering quality solutions</p>
+        </div>
+
+        <div class="experience-stats">
+            <div class="stat">
+            <h3 class="blue">3+</h3>
+            <p>Years Experience</p>
+            </div>
+            <div class="stat">
+            <h3 class="purple">13</h3>
+            <p>Computer Systems Built</p>
+            </div>
+            <div class="stat">
+            <h3 class="green">9</h3>
+            <p>Projects Completed</p>
+            </div>
+            <div class="stat">
+            <h3 class="pink">100%</h3>
+            <p>Client Satisfaction</p>
+            </div>
+        </div>
+    </section>
+    <hr class="divider" />
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-header">
+            <h2 class="tit">Let's Work Together</h2>
+            <p class="subtit">Ready to bring your next project to life? Let's discuss how I can help.</p>
+        </div>
+
+        <div class="services">
+            <div class="service-box">
+            <ul>
+                <li style="font-size: 30px;">Development Services</li>
+                <li>Web Applications <span class="status">Available</span></li>
+                <li>Software Application <span class="status">Available</span></li>
+                <li>E-commerce Solutions <span class="status">Available</span></li>
+                <li>API Development <span class="status">Available</span></li>
+            </ul>
+            </div>
+
+            <div class="service-box">
+            <ul>
+                <li style="font-size: 30px;">Technical Services</li>
+                <li>System Optimization <span class="status">Available</span></li>
+                <li>Custom PC Builds <span class="status">Available</span></li>
+                <li>Design Projects <span class="status">Available</span></li>
+                <li>Technical Consulting <span class="status">Available</span></li>
+            </ul>
+            </div>
+        </div>
+
+        <div class="contact-links">
+            <a href="mailto:sigfrid.alpiedam@email.com" class="btn2 email">
+            <img src="assets/icons/email.png" alt="Email"> sigfrid.alpiedam@email.com
+            </a>
+            <a href="https://linkedin.com/in/sigfridaljheanalpiedamcoesysdev" target="_blank" class="btn2">
+            <img src="assets/icons/linked.png" alt="LinkedIn"> LinkedIn
+            </a>
+            <a href="https://www.facebook.com/ping.alpiedam" target="_blank" class="btn2">
+            <img src="assets/icons/facebook.png" alt="Facebook"> Facebook
+            </a>
+            <a href="https://www.instagram.com/a.aljheans/" target="_blank" class="btn2">
+            <img src="assets/icons/instagram.png" alt="Instagram"> Instagram
+            </a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

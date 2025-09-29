@@ -1,0 +1,19 @@
+@media screen and (max-width: 1200px) {
+    #desktop-nav {
+        display: none;
+    }
+    #hamburger-nav {
+        display: flex;
+    }
+}
+
+
+/* About Section */
+@media screen and (max-width: 1200px) {
+    .aboutdes {
+        width: 90%; 
+        font-size: 20px;     
+        padding: 0 10px;    
+        color: #666;        
+    }
+}
