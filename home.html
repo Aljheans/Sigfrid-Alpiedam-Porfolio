@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sigfrid Alpiedam — Portfolio</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <!-- Animated background orbs -->
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="orb cyan" aria-hidden="true"></div>
+    <div class="orb purple" aria-hidden="true"></div>
+    <div class="orb green" aria-hidden="true"></div>
+  </div>
+
+  <!-- Floating nav -->
+  <nav aria-label="Section navigation" class="floating-nav" id="floatingNav">
+    <button data-section="home" aria-label="Go to Home" class="active">●</button>
+    <button data-section="about" aria-label="Go to About">●</button>
+    <button data-section="skills" aria-label="Go to Skills">●</button>
+    <button data-section="work" aria-label="Go to Work">●</button>
+    <button data-section="contact" aria-label="Go to Contact">●</button>
+  </nav>
+
+  <!-- Top nav -->
+  <nav class="topnav" role="navigation" aria-label="Main">
+    <div class="topnav-inner container">
+      <div class="brand" aria-hidden="false">
+        <div class="logo" aria-hidden="true">⌘</div>
+        <div>
+          <div style="font-weight:700">Sigfrid Alpiedam</div>
+          <div class="muted" style="font-size:0.85rem">Computer Engineer</div>
+        </div>
+      </div>
+
+      <div class="navlinks" id="navLinks" role="menubar" aria-label="Primary">
+        <button role="menuitem" data-section="home" class="active">home</button>
+        <button role="menuitem" data-section="about">about</button>
+        <button role="menuitem" data-section="skills">skills</button>
+        <button role="menuitem" data-section="work">work</button>
+        <button role="menuitem" data-section="contact">contact</button>
+      </div>
+
+      <div style="display:flex;gap:10px;align-items:center">
+        <a class="download-resume" href="assets/resume.pdf" download aria-label="Download resume">Download Resume</a>
+        <button id="themeToggle" class="btn ghost" aria-pressed="false" aria-label="Toggle dark or light theme">Toggle Theme</button>
+        <button class="btn" id="hireBtn" aria-label="Hire me - go to contact">Hire Me</button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero" aria-labelledby="home-heading">
+      <div class="container hero-grid">
+        <div class="hero-left" id="heroLeft">
+          <div style="margin-bottom:10px">
+            <span class="badge" aria-hidden="true">⚡ Available for Work</span>
+          </div>
+
+            <h1 id="home-heading">
+            <span class="name-wrap">
+                <span class="name-text" id="animatedName">Sigfrid Aljhean</span>
+            </span>
+            <span class="accent"> Alpiedam</span>
+            </h1>
+
+          <p>
+            Computer Engineer specializing in <strong class="text-accent">full-stack development</strong> &
+            <strong class="text-primary"> system optimization</strong>. Building the future with Python, Django, and cutting-edge technologies.
+          </p>
+
+          <div class="actions" style="margin-top:18px">
+            <button class="btn" onclick="scrollToSection('work')">View Projects →</button>
+            <button class="btn ghost" onclick="scrollToSection('contact')">Get in Touch</button>
+          </div>
+
+          <div style="margin-top:18px;display:flex;gap:12px">
+            <a href="mailto:sigfrid.alpiedam@email.com" class="glass-strong" style="display:inline-flex;padding:10px;border-radius:12px;align-items:center;gap:8px">
+              ✉ Email
+            </a>
+            <a href="#" class="glass-strong" style="display:inline-flex;padding:10px;border-radius:12px;align-items:center;gap:8px">GitHub</a>
+            <a href="#" class="glass-strong" style="display:inline-flex;padding:10px;border-radius:12px;align-items:center;gap:8px">LinkedIn</a>
+          </div>
+        </div>
+
+        <!-- Profile image and stats -->
+        <div class="profile-card" aria-hidden="true" style="position:relative">
+          <div style="position:relative">
+            <div style="overflow:hidden;border-radius:20px">
+              <img src="assets/pics/ecommerce-1.jpg" alt="Profile / example project image" style="width:100%;height:480px;object-fit:cover">
+              <div style="position:absolute;inset:0;background:linear-gradient(to top, var(--background), transparent)"></div>
+            </div>
+
+            <div class="stat-floating top" aria-hidden="true">
+              <div class="num neon-text">2+</div>
+              <div class="muted" style="font-size:12px">Years Exp.</div>
+            </div>
+
+            <div class="stat-floating bottom" aria-hidden="true">
+              <div class="num text-accent">10+</div>
+              <div class="muted" style="font-size:12px">Projects</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider-diag" aria-hidden="true"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-title">
+          <div class="badge">About Me</div>
+          <h2 id="about-heading" class="neon-text">Crafting Digital Excellence</h2>
+          <p class="muted">A passionate computer engineer who bridges the gap between software innovation and hardware optimization</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card" tabindex="0" aria-label="Full-Stack Development">
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+              <div style="width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--secondary));display:flex;align-items:center;justify-content:center">⌘</div>
+              <div>
+                <h4>Full-Stack Development</h4>
+                <div class="muted">Building scalable web apps with Python, Django & modern JS</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-card" tabindex="0" aria-label="System Architecture">
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+              <div style="width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--secondary),var(--primary));display:flex;align-items:center;justify-content:center">⚙</div>
+              <div>
+                <h4>System Architecture</h4>
+                <div class="muted">Designing robust backends focused on performance & security</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-card" tabindex="0" aria-label="Hardware Expertise">
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+              <div style="width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--primary));display:flex;align-items:center;justify-content:center">💻</div>
+              <div>
+                <h4>Hardware Expertise</h4>
+                <div class="muted">Custom PC building & system optimization for max performance</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey" style="margin-top:22px;border:1px solid var(--border)">
+          <div>
+            <h3>My Journey</h3>
+            <p class="muted">As a computer engineering graduate, I've developed a unique perspective that combines software elegance with hardware efficiency. My experience ranges from enterprise-level web apps to high-performance computing optimization.</p>
+
+            <p class="muted" style="margin-top:12px">I thrive on solving complex problems and turning innovative ideas into reality. Whether it's architecting a scalable backend or building a custom gaming rig, I approach every challenge with precision and creativity.</p>
+
+            <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+              <span class="badge">Python</span>
+              <span class="badge">Django</span>
+              <span class="badge">JavaScript</span>
+              <span class="badge">PostgreSQL</span>
+              <span class="badge">System Admin</span>
+            </div>
+          </div>
+
+          <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px">
+            <div class="glass-strong" style="text-align:center;padding:18px;border-radius:12px">
+              <div style="font-size:1.25rem" class="neon-text">2+ Years</div>
+              <div class="muted" style="font-size:12px">Experience</div>
+            </div>
+            <div class="glass-strong" style="text-align:center;padding:18px;border-radius:12px">
+              <div style="font-size:1.25rem" class="text-accent">10+</div>
+              <div class="muted" style="font-size:12px">Projects</div>
+            </div>
+            <div class="glass-strong" style="text-align:center;padding:18px;border-radius:12px">
+              <div style="font-size:1.25rem" class="muted">8+</div>
+              <div class="muted" style="font-size:12px">Clients</div>
+            </div>
+            <div class="glass-strong" style="text-align:center;padding:18px;border-radius:12px">
+              <div style="font-size:1.25rem" class="neon-text">15+</div>
+              <div class="muted" style="font-size:12px">Tech Stack</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-title">
+          <div class="badge">Technical Skills</div>
+          <h2 id="skills-heading" class="neon-text">My Tech Arsenal</h2>
+        </div>
+
+        <div class="skills-grid" id="skillsGrid" style="margin-top:18px" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- WORK / PROJECTS -->
+    <section id="work" aria-labelledby="work-heading">
+      <div class="container">
+        <div class="section-title">
+          <div class="badge">Portfolio</div>
+          <h2 id="work-heading" class="neon-text">Featured Projects</h2>
+          <p class="muted">A collection of my best work showcasing full-stack development and system engineering</p>
+        </div>
+
+        <div class="projects" id="projectsList" style="margin-top:28px" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <div class="container" style="max-width:900px">
+        <div class="section-title">
+          <div class="badge">Let's Connect</div>
+          <h2 id="contact-heading" class="neon-text">Ready to Start a Project?</h2>
+          <p class="muted">I'm currently available for freelance work and full-time opportunities. Let's build something amazing together.</p>
+        </div>
+
+        <div style="display:flex;gap:12px;justify-content:center;margin-top:18px;flex-wrap:wrap">
+          <a href="mailto:sigfrid.alpiedam@email.com" class="btn">✉ Send Message</a>
+          <a href="assets/resume.pdf" class="btn ghost" download>Download Resume</a>
+        </div>
+
+        <div style="margin-top:28px" class="contact-grid">
+          <div class="contact-card">
+            <div style="font-weight:700">Email</div>
+            <div class="muted">sigfrid.alpiedam@email.com</div>
+          </div>
+          <div class="contact-card">
+            <div style="font-weight:700">GitHub</div>
+            <div class="muted">@sigfridalpiedam</div>
+          </div>
+          <div class="contact-card">
+            <div style="font-weight:700">LinkedIn</div>
+            <div class="muted">Sigfrid Alpiedam</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div style="display:flex;align-items:center;gap:12px">
+        <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--secondary));display:flex;align-items:center;justify-content:center">⌘</div>
+        <div>
+          <div style="font-weight:700">Sigfrid Alpiedam</div>
+          <div class="muted" style="font-size:12px">Computer Engineer</div>
+        </div>
+      </div>
+
+      <div class="small">© 2024 All rights reserved. Built with HTML, CSS & JavaScript</div>
+
+      <div style="display:flex;gap:8px">
+        <a class="glass-strong" style="padding:8px;border-radius:999px">GitHub</a>
+        <a class="glass-strong" style="padding:8px;border-radius:999px">LinkedIn</a>
+        <a class="glass-strong" style="padding:8px;border-radius:999px">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal (gallery) -->
+  <div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal" role="document" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+      <button class="close" id="modalClose" aria-label="Close project details">✕</button>
+
+      <div class="modal-body">
+        <div class="modal-left" id="modalLeft">
+          <div class="carousel-controls" aria-hidden="true">
+            <button id="prevSlide" aria-label="Previous image">◀</button>
+            <button id="nextSlide" aria-label="Next image">▶</button>
+          </div>
+
+          <img id="modalImage" src="" alt="Project image">
+          <div class="carousel-indicators" id="carouselIndicators" role="tablist" aria-label="Image indicators"></div>
+        </div>
+
+        <div class="modal-right">
+          <h3 id="modalTitle">Project Title</h3>
+          <div id="modalYear" class="muted meta">Year</div>
+          <div id="modalRole" style="color:var(--secondary);font-weight:600">Role</div>
+          <p id="modalDesc" class="muted">Project description</p>
+
+          <div id="modalTags" style="margin-top:6px"></div>
+
+          <div style="margin-top:18px;display:flex;gap:8px">
+            <a id="modalGithub" class="btn" href="#" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            <button class="btn ghost" id="modalClose2">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
