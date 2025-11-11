@@ -5,46 +5,45 @@ function toggleMenu() {
     icon.classList.toggle("open");
 }
 
+
 document.addEventListener("DOMContentLoaded", () => {
-  const carousel = document.querySelector(".scrolling-carousel");
-  if (!carousel) return;
+    const carousel = document.querySelector(".scrolling-carousel");
 
-  const cards = Array.from(carousel.children);
-  const containerWidth = carousel.offsetWidth;
+    if (!carousel) return;
 
-  let totalWidth = 0;
-  while (true) {
-    totalWidth = Array.from(carousel.children).reduce((sum, card) => sum + card.offsetWidth, 0) + 20 * (carousel.children.length - 1);
-    if (totalWidth >= containerWidth * 2) break;
-    cards.forEach(card => {
-      const clone = card.cloneNode(true);
-      carousel.appendChild(clone);
+    carousel.addEventListener("wheel", (e) => {
+        if (e.deltaY !== 0) {
+            e.preventDefault();
+            carousel.scrollLeft += e.deltaY;
+        }
     });
-  }
 
-  totalWidth = Array.from(carousel.children).reduce((sum, card) => sum + card.offsetWidth, 0) + 20 * (carousel.children.length - 1);
+    let isDown = false;
+    let startX;
+    let scrollLeft;
 
-  let speed = 0.5;
-  let rafId;
+    carousel.addEventListener("mousedown", (e) => {
+        isDown = true;
+        carousel.classList.add("active");
+        startX = e.pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+    });
 
-  function step() {
-    carousel.scrollLeft += speed;
-    if (carousel.scrollLeft >= totalWidth / 2) {
-      carousel.scrollLeft -= totalWidth / 2;
-    }
-    rafId = requestAnimationFrame(step);
-  }
+    carousel.addEventListener("mouseleave", () => {
+        isDown = false;
+        carousel.classList.remove("active");
+    });
 
-  step();
+    carousel.addEventListener("mouseup", () => {
+        isDown = false;
+        carousel.classList.remove("active");
+    });
 
-  carousel.addEventListener("mouseenter", () => {
-    speed = 0;
-  });
-
-  carousel.addEventListener("mouseleave", () => {
-    speed = 0.5;
-  });
+    carousel.addEventListener("mousemove", (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 2;
+        carousel.scrollLeft = scrollLeft - walk;
+    });
 });
-
-
-

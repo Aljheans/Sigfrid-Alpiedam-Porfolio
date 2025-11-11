@@ -452,25 +452,31 @@ p {
   gap: 20px;
   overflow-x: auto;
   scroll-behavior: smooth;
-  scrollbar-width: none;
-  -ms-overflow-style: none; 
-  padding: 20px 0;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px 10px;
   background: #0d1117;
   white-space: nowrap;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: #00d9ff #0d1117;
 }
 
 .projects-wrapper::-webkit-scrollbar {
-  display: none; 
+  height: 8px;
+}
+.projects-wrapper::-webkit-scrollbar-thumb {
+  background-color: #00d9ff;
+  border-radius: 4px;
+}
+.projects-wrapper::-webkit-scrollbar-track {
+  background: #0d1117;
 }
 
-.scrolling-carousel:hover,
-.project-card:hover {
-  animation-play-state: paused !important;
-}
-
+/* Project cards */
 .project-card {
-  flex: 0 0 auto;
-  width: 300px;
+  flex: 0 0 calc(25% - 20px);
+  min-width: 280px;
+  max-width: 320px;
   background: #161b22;
   border-radius: 12px;
   overflow: hidden;
@@ -478,15 +484,19 @@ p {
   position: relative;
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  user-select: none;
+  scroll-snap-align: start;
 }
+
 .project-card:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); 
 }
+
 .project-card img {
   width: 100%;
   display: block;
+  height: 180px;
+  object-fit: cover;
 }
 
 .project-status {
@@ -499,6 +509,7 @@ p {
   font-weight: bold;
   color: #fff;
 }
+
 .project-status.production { background: #2ecc71; }
 .project-status.active { background: #3498db; }
 .project-status.open-source { background: #9b59b6; }
@@ -524,7 +535,6 @@ p {
   color: #aaa;
   margin: 8px 0 12px;
   overflow-wrap: break-word;
-  word-wrap: break-word;
   white-space: normal;
 }
 
@@ -539,6 +549,22 @@ p {
   padding: 4px 8px;
   border-radius: 6px;
   font-size: 12px;
+}
+
+@media (max-width: 1200px) {
+  .project-card {
+    flex: 0 0 calc(33.33% - 20px);
+  }
+}
+@media (max-width: 900px) {
+  .project-card {
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+@media (max-width: 600px) {
+  .project-card {
+    flex: 0 0 100%;
+  }
 }
 
 /* Experience Section */
