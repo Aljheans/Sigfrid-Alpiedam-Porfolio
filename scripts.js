@@ -243,7 +243,6 @@ function initInteractions(){
     modalEl.addEventListener('DOMNodeRemoved', () => modalEl.removeEventListener('keydown', handleTab));
   }
 
-  // theme toggle
   const themeToggle = document.getElementById('themeToggle');
   function setTheme(theme){
     if(theme === 'light'){
@@ -298,7 +297,6 @@ function initInteractions(){
   }, spyOptions);
   sections.forEach(s => { const el = document.getElementById(s); if(el) spy.observe(el); });
 
-  // skill bar animation
   const skillObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if(entry.isIntersecting){
@@ -311,7 +309,6 @@ function initInteractions(){
   }, {threshold:0.25});
   document.querySelectorAll('.skill').forEach(s => skillObserver.observe(s));
 
-  // reveal observer
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if(entry.isIntersecting){
@@ -323,7 +320,6 @@ function initInteractions(){
   }, {threshold:0.08});
   document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-  // hero parallax and animated name
   const heroLeft = document.getElementById('heroLeft');
   function heroParallax(){
     const hero = document.querySelector('.hero');
@@ -341,10 +337,8 @@ function initInteractions(){
   window.addEventListener('resize', heroParallax);
   heroParallax();
 
-  // Hire Me button
   document.getElementById('hireBtn').addEventListener('click', ()=>scrollToSection('contact'));
 
-  // focus-visible polyfill-ish behavior
   (function(){
     let hadKeyboardEvent = true;
     const handleKeyDown = (e) => { hadKeyboardEvent = true; };
@@ -359,7 +353,6 @@ function initInteractions(){
     });
   })();
 
-  // adjust orbs blur small screens
   function adjustOrbs(){
     if(window.innerWidth < 600){
       document.querySelectorAll('.orb').forEach(o => o.style.filter = 'blur(24px)');
